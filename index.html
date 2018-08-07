@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <!--making of a dynamic table without rows and cells-->
+    <table id="dynamic-table" border="1">
+    </table>
+    <br>
+    <input type="button" value="Add row" onclick="addRow()">
+    <script>
+        var a=0;
+        function addRow() {
+            a=a+1;
+            var table = document.getElementById("dynamic-table");
+            //row insert declartion
+            var row = table.insertRow(0);
+            //cell insert declaration
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            //actual cell addition
+            cell1.innerHTML = "Cell"+a;
+            a=a+1;
+            cell2.innerHTML = "Cell"+a;
+        }
+    </script>
+</body>
+</html>
